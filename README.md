@@ -25,6 +25,7 @@ You'll work with classes `DynamicArray.java` and `DynamicArray_Implementation.ja
 
 From the BJP textbook Chapters 16.1, 16.2, and 16.3; or [Ch. 6 from Collins’ book](https://learning.oreilly.com/library/view/data-structures-and/9780470482674/13-chapter06.html). In addition, you should be up to speed with the following.
 
+* Chapter 3.1 (about method overloading) (alternatively Java's [tutorial on methods](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html))
 * Chapter 18.2 from the BJP textbook (or at the very least Leo’s notes titled “What’s Realistic”)
 * Chapter 8 from the BJP textbook (or at the very least Java’s tutorial on Classes and Objects)
 * Chapter 9 from the BJP textbook (or at the very least Java's tutorial on interfaces and inheritance)
