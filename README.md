@@ -37,6 +37,7 @@ Your discussion for the above should be in the form of a well-written essay, 200
 
 There is no final exam for the course. There will be a final assignemnt that will be published the week before finals and will be due the week of finals. Additionally, 8 students in the course will be [invited randomly](https://github.com/lgreco/random-selection-final-oral) to a brief meeting with the instructor during the course's final exam slot. The final exam slot for this course is on Tuesday, August 5, 2025 from 9 to 11 AM. If you are selected for a brief meeting, we'll spend about 15 minutes during the final exam slot to review your work. This interview will cover coding practices based on your past assignments. It is meant as a checkpoint to ensure that you have internalized the work you submitted.
 
+---
 
 # Code
 
@@ -64,8 +65,9 @@ The method removes and returns the contents of the first element in the underlyi
 
 
 ## Complete method `String toString()`
-Be creative; try to avoid magic values as much as possible. Remember tha Loyola is like Hogwarts: *help will always be given at Hogwarts to those who ask for it.*
+Be creative; try to avoid magic values as much as possible. Remember that Loyola is like Hogwarts: *help will always be given at Hogwarts to those who ask for it.*
 
+---
 
 # Study
 
@@ -76,6 +78,7 @@ From the BJP textbook Chapter 10; or [Ch. 6 from Collins’ book](https://learni
 * Chapter 8 from the BJP textbook (or at the very least Java’s tutorial on Classes and Objects)
 * Chapter 9 from the BJP textbook (or at the very least Java's tutorial on interfaces and inheritance)
 
+---
 
 # Reflect
 
