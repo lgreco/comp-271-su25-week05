@@ -3,7 +3,7 @@
 This assignment has **THREE** parts: a **midterm review part,** a coding part based on current material we discuss in class and a reflection part to evaluate work you have already submitted.
 
 
-# MIDTERM REVIEW
+## MIDTERM REVIEW
 
 *Ungrading* is an assessment technique that measures learning and professional development. Learning is assessed by how you learn from your mistakes. Professional development is assessed by your overall engagement with the course.
 
@@ -25,7 +25,7 @@ Looking at your course engagement over the first six weeks, discuss how you've m
 Your discussion for the above should be in the form of a well-written essay, 200-300 words. You may include it in your week05 assignemnt as `midterm_review.md`.
 
 
-# Standing requirements
+## Standing requirements
 
 * **Programmers Pact:** Your work must be compliant with the [Programmers Pact](./ProgrammerPact.pdf). 
 * **Comments:** Your code must be sufficiently documented with comments.
@@ -33,43 +33,43 @@ Your discussion for the above should be in the form of a well-written essay, 200
 * **Only `System.out` calls:** you may use `System.out` to print to the console. No other methods from `System` are allowed. Only `System.out.println`, `System.out.printf`, and `System.out.print`. 
 
 
-# Finals week policy
+## Finals week policy
 
 There is no final exam for the course. There will be a final assignemnt that will be published the week before finals and will be due the week of finals. Additionally, 8 students in the course will be [invited randomly](https://github.com/lgreco/random-selection-final-oral) to a brief meeting with the instructor during the course's final exam slot. The final exam slot for this course is on Tuesday, August 5, 2025 from 9 to 11 AM. If you are selected for a brief meeting, we'll spend about 15 minutes during the final exam slot to review your work. This interview will cover coding practices based on your past assignments. It is meant as a checkpoint to ensure that you have internalized the work you submitted.
 
 ---
 
-# Code
+## Code
 
 You'll work with classes `DynamicArray.java` and `DynamicArray_Implementation.java`. There are 6 tasks in this assignment.
 
 
-## Complete method `int indexOf(String string)`
+### Complete method `int indexOf(String string)`
 This method should return the index position of the given `string`, in the underlying array. If the `string` is not present, the method should return -1.
 
 
-## Complete method `boolean contains(String string)`
+### Complete method `boolean contains(String string)`
 The method should return `true` if the `string` is present in the underlying array and `false` otherwise.
 
 
-## Complete method `int countOf(String string)`
+### Complete method `int countOf(String string)`
 The method should return the number of times the given `string` appears in the underlying array. If the `string` is not present, the method returns 0.
 
 
-## Complete method `String remove(int index)`
+### Complete method `String remove(int index)`
 The method removes and returns the contents at the `index` position of the underlying array. It's important to shift the elements after the removed string one position to the left.
 
 
-## Complete method `String remove(String string)`
+### Complete method `String remove(String string)`
 The method removes and returns the contents of the first element in the underlying array that contains the give `string`. If the `string` is not present, the method shall return `null`.
 
 
-## Complete method `String toString()`
+### Complete method `String toString()`
 Be creative; try to avoid magic values as much as possible. Remember that Loyola is like Hogwarts: *help will always be given at Hogwarts to those who ask for it.*
 
 ---
 
-# Study
+## Study
 
 From the BJP textbook Chapter 10; or [Ch. 6 from Collins’ book](https://learning.oreilly.com/library/view/data-structures-and/9780470482674/13-chapter06.html). In addition, you should be up to speed with the following.
 
@@ -80,7 +80,7 @@ From the BJP textbook Chapter 10; or [Ch. 6 from Collins’ book](https://learni
 
 ---
 
-# Reflect
+## Reflect
 
 Compare your code from the previous assignment with [Leo's posted solutions](https://github.com/lgreco/lgreco-comp-271-su25-week04/blob/main/solution_DoubleLinkedList.java).
 
@@ -89,10 +89,10 @@ Then write a brief reflection (100-300 words) discussing what you got right, wha
 In the assignment for WEEK 04 you were given class `DoubleLinkedList` and asked to improve it in several ways.
 
 
-## TECHNICAL NOTES FOR UNGRADING
+### TECHNICAL NOTES FOR UNGRADING
 
 
-### Complete `void add(Node node)` in `DoubleLinkedList` 
+#### Complete `void add(Node node)` in `DoubleLinkedList` 
 
 This required use of the newly introduced field attribute `tail`. Your `add` method should not have a while loop. Instead it should use the `tail` reference to extend the linked list. Initially, you may be tempted to write the solution as:
 ```java
@@ -124,7 +124,7 @@ public void add(Node node) {
 Because we are dealing with a **double** linked list, it is important to assign the `previous` pointer as well, as shown above.
 
 
-### Complete `void add(String value)` in `DoubleLinkedList`
+#### Complete `void add(String value)` in `DoubleLinkedList`
 If your code has more than one line, you probably got it wrong. The solution here is what is called a *wrapper function.* Such functions call existing functions to simplify a task, provide additional behavior, etc. In this case, we wrap the existing function `void add(Node node)` as follows:
 ```java
 public void add(String string) {
@@ -135,7 +135,7 @@ A wrapper function delegates its work to another function. Here we create a new 
 job.
 
 
-### Complete `int compareTo(DoubleLinkedList other)` in `DoubleLinkedList`
+#### Complete `int compareTo(DoubleLinkedList other)` in `DoubleLinkedList`
 The obvious choice here is to
 ```java
 return this.size - other.size;
@@ -143,11 +143,11 @@ return this.size - other.size;
 If you came up with a different metric, I would love to hear from you. The more weird your metric is, the more curious I am about it.
 
 
-### Write an `indexOf` method in `DoubleLinkedList``
+#### Write an `indexOf` method in `DoubleLinkedList``
 There are two potential errors here. First, the use of a second `return` statement that would violate the Programmer's Pact. Second, an *off-by-one error.* The idea is to write a loop that traverses the list and counts the steps. When the target node is found, the loop ends. The loop also ends when it reaches the end of the list without finding anything. But let's focus on the positive side: we found the target node. As the loop exits, the counter variable used it in, is incremented by 1. For example, if the target node is at position 4, the counter **may be** showing 5. This depends on where we evaluate the boolean expression that stops the loop. We have to take this into consideration and return `counter-1` to compensate for the error.
 
 
-### Write a `contains` method in `DoubleLinkedList`
+#### Write a `contains` method in `DoubleLinkedList`
 This will be another wrapper function, returning a call to `indexOf`:
 ```java
 return this.indexOf(value) != -1; // > -1 ok too
@@ -160,24 +160,24 @@ return this.indexOf(value) > 0;
 This would be wrong as it exludes the first node of the list (whose position is at 0).
 
 
-### Report the number of nodes in a `DoubleLinkedList`
+#### Report the number of nodes in a `DoubleLinkedList`
 This is also a one-liner method that returns the current value of `this.size`.
 
 
-### Does your code compile? 
+#### Does your code compile? 
 If not, the assignment is incomplete. If your assignment is incomplete you must make an appointment to speak with Leo, as soon as possible.
 
 
-### Did your code pass the tests?
+#### Did your code pass the tests?
 If not, the assignment is incomplete. If your assignment is incomplete you must make an appointment to speak with Leo, as soon as possible.
 
 
-### Incomplete code
+#### Incomplete code
 
 If your code is incomplete for any of the reasons above, please reflect on the cause. Did you start late? Did you hit a roadblock but did not ask for help? Did you not read the Programmer's Pact? Something else?
 
 
-### How to submit
+#### How to submit
 
 Your reflection should be submitted together with the current homework assignment due 6/25. Write your reflection as a *markdown* file called `reflection.md` in the current assignment's repository. **MarkDown** is a fairly simple markup (I know!) language that's worth learning. You can use a [simple cheat sheet](https://www.markdownguide.org/basic-syntax/) for MarkDown (.md) files or you can look at the course code of any `.md` file I share with you such as this one here. You can open any `.md` file on your CodeSpaces editor to see how it's written. 
 
