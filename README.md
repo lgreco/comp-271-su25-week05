@@ -139,9 +139,9 @@ This would be wrong as it exludes the first node of the list (whose position is 
 This is also a one-liner method that returns the current value of `this.size`.
 
 
-* **Does your code compile** with class `TrainLine_Implemnetation`? If not, the assignment is incomplete. If your assignment is incomplete you must make an appointment to speak with Leo, as soon as possible.
+* **Does your code compile?**  If not, the assignment is incomplete. If your assignment is incomplete you must make an appointment to speak with Leo, as soon as possible.
 
-* **Did your code pass the tests** in `TrainLine_Implementation`? If not, the assignment is incomplete. If your assignment is incomplete you must make an appointment to speak with Leo, as soon as possible.
+* **Did your code pass the tests?** If not, the assignment is incomplete. If your assignment is incomplete you must make an appointment to speak with Leo, as soon as possible.
 
 * If your code is incomplete for any of the reasons above, please reflect on the cause. Did you start late? Did you hit a roadblock but did not ask for help? Did you not read the Programmer's Pact? Something else?
 
